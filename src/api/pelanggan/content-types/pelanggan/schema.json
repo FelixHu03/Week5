@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pelanggans",
+  "info": {
+    "singularName": "pelanggan",
+    "pluralName": "pelanggans",
+    "displayName": "pelanggan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_pelanggan": {
+      "type": "string",
+      "required": true,
+      "regex": "Pel_",
+      "default": "Pel_"
+    },
+    "total_biaya": {
+      "type": "biginteger",
+      "required": true
+    },
+    "barangs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::barang.barang",
+      "mappedBy": "pelanggans"
+    },
+    "kasirs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::kasir.kasir",
+      "mappedBy": "pelanggans"
+    }
+  }
+}

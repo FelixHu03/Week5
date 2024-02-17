@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "barangs",
+  "info": {
+    "singularName": "barang",
+    "pluralName": "barangs",
+    "displayName": "barang",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_barang": {
+      "type": "string",
+      "required": true
+    },
+    "Type_barang": {
+      "type": "string",
+      "required": true
+    },
+    "stok": {
+      "type": "integer",
+      "required": true
+    },
+    "Nama_Barang": {
+      "type": "text",
+      "required": true
+    },
+    "Harga": {
+      "type": "biginteger"
+    },
+    "pelanggans": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pelanggan.pelanggan",
+      "inversedBy": "barangs"
+    }
+  }
+}

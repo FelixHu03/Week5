@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kasirs",
+  "info": {
+    "singularName": "kasir",
+    "pluralName": "kasirs",
+    "displayName": "kasir",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_kasir": {
+      "type": "string",
+      "required": true
+    },
+    "pegawais": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pegawai.pegawai",
+      "mappedBy": "kasir"
+    },
+    "pelanggans": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pelanggan.pelanggan",
+      "inversedBy": "kasirs"
+    }
+  }
+}
