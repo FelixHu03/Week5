@@ -1,3 +1,6 @@
+# berikut adalah hasil Saya Felix dengan NPM: 2327250059 
+
+
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
